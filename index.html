@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href ="Images/folder.ico"/>
+    <link rel="stylesheet"  href="styles.css">
+    <script src="https://kit.fontawesome.com/fb01ad45a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!----------------------------Home section starts----------------------------->
+    <div id="home">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">My Portfolio</a>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="home-text">
+                <p>Hi there. I'm Strini. <br> Welcome to my portfolio.</p>
+            </div>
+        </div>
+    </div>
+
+<!----------------------------Home section ends----------------------------->
+
+<!----------------------------About section starts----------------------------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-1">
+                <img src="Images/About.jpg">
+            </div>
+            <div class="about-2">
+                <h1 class="category">About Me:</h1><br>
+                <p>I'm a software and web developer specializing in front end web development and desktop software applications.</p>
+
+                <div class="about-titles">
+                    <p class="about-links active-link" onclick="opentab('skills')">Skills:</p>
+                    <p class="about-links" onclick="opentab('education')">Education:</p>
+                </div>
+                <div class="about-contents active-tab" id="skills">
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Application Development</li>
+                    </ul>
+                </div>
+                <div class="about-contents" id="education">
+                    <ul>
+                        <li><span>2008</span><br>Business Management Certificate from Careers 2000.</li>
+                        <li><span>2014 - 2016</span><br>BScIT from Oval International.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------About section ends----------------------------->
+
+<!----------------------------Services section starts----------------------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="category">Services:</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Development of amazing web applications.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-desktop"></i>
+                <h2>Application Development</h2>
+                <p>Development of systematic desktop solutions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------Services section ends----------------------------->
+
+<!----------------------------Projects section starts----------------------------->
+
+<div id="projects">
+    <div class="container">
+        <h1 class="category">Projects:</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="Images/Vikela.png">
+                <div class="layer">
+                    <h3>Vikela Auto Management System:</h3>
+                    <p>An application that controls issuing of accessories and captures data during accessory fitment.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/SN Pets.png">
+                <div class="layer">
+                    <h3>SN Pets:</h3>
+                    <p>An inventory management and point of sale system for a fictional pet store. </p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/Infinity Clothing.png">
+                <div class="layer">
+                    <h3>Infinity Clothing:</h3>
+                    <p>An website for an online women's clothing store.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/Game Night.png">
+                <div class="layer">
+                    <h3>Game Night:</h3>
+                    <p>A quiz website that tests your knowledge on the TV shows Game of Thrones and Breaking Bad and displays your results at the end.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------Projects section ends----------------------------->
+
+<!----------------------------Contact section starts----------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="category">Contact Me:</h1><br>
+                <p><i class="fas fa-envelope"></i> naicker.strini7@gmail.com</p><br>
+                <p><i class="fas fa-phone"></i> 0721880916</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/strini.naicker14"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/strininaicker14"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/strinivasen-naicker-1737889a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyLqIyjITJyqcC6KvNs3UQ%3D%3D"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="Images/CV of Strini Naicker.pdf" download class="btn btn2">Download My CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name:" required>
+                    <input type="email" name="Email" placeholder="Your Email:" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message:"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="reply"></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright <i class="fas fa-copyright"></i> Strini Naicker. 2023. All rights reserved. </p>
+    </div>
+</div>
+
+<!----------------------------Contact section ends----------------------------->
+
+<!----------------------------------JavaScript starts-------------------------------->
+
+<script>
+
+    var aboutlinks = document.getElementsByClassName("about-links");
+    var aboutcontents = document.getElementsByClassName("about-contents");
+    
+    function opentab(aboutname){
+         for(aboutlink of aboutlinks){
+            aboutlink.classList.remove("active-link");
+         }
+         for(aboutcontent of aboutcontents){
+            aboutcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(aboutname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxBxubJI5QzvG8CpmZB6F4GxmFFnWUwiD2Trw_jYQ0-lsZS7deBzyabQAmHIfYoMPRoBQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const reply = document.getElementById("reply")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            reply.innerHTML = "Thank you. Your message has been sent successfully."
+            setTimeout(function(){
+                reply.innerHTML = ""
+            },3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<!----------------------------------JavaScript ends-------------------------------->
+
+
+
+</body>
+</html>
